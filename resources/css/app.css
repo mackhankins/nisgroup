@@ -11,6 +11,30 @@
     --color-nisgreen: #88C540;
 }
 
+@layer utilities {
+    @keyframes infinite-scroll {
+        from { transform: translateX(0); }
+        to { transform: translateX(calc(-250px * 5)); }
+    }
+
+    @keyframes infinite-scroll-reverse {
+        from { transform: translateX(calc(-250px * 5)); }
+        to { transform: translateX(0); }
+    }
+
+    .animate-infinite-scroll {
+        animation: infinite-scroll 25s linear infinite;
+    }
+
+    .animate-infinite-scroll-reverse {
+        animation: infinite-scroll-reverse 25s linear infinite;
+    }
+
+    .svg-white {
+        filter: brightness(0) invert(1);
+    }
+}
+
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
