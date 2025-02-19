@@ -9,7 +9,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16 md:h-20">
                 <div class="flex items-center z-[200] relative h-full">
-                    <a href="#home" class="text-xl md:text-2xl font-bold transition-colors duration-300 flex items-center h-full -ml-12 sm:ml-0"
+                    <a href="#home"
+                       class="text-xl md:text-2xl font-bold transition-colors duration-300 flex items-center h-full -ml-12 sm:ml-0"
                        :class="{ 'text-white': !scrolled && !mobileMenu && window.location.hash === '', 'text-[#2d2d2d]': scrolled || mobileMenu || window.location.hash !== '' }">
                         <div class="flex items-center h-full w-auto">
                             @include('partials.logo', ['scale' => 2.5, 'transform_origin' => 'left center'])
@@ -38,15 +39,18 @@
 
                 {{-- Desktop navigation --}}
                 <div class="hidden sm:flex sm:items-center sm:space-x-4 md:space-x-8 h-full">
-                    <a href="#home" class="nav-link text-sm md:text-base font-medium transition-colors duration-300 h-full flex items-center"
+                    <a href="#home"
+                       class="nav-link text-sm md:text-base font-medium transition-colors duration-300 h-full flex items-center"
                        :class="{ 'text-white hover:text-[#8cc63f]': !scrolled && !mobileMenu && window.location.hash === '', 'text-gray-600 hover:text-[#8cc63f]': scrolled || mobileMenu || window.location.hash !== '' }">
                         Home
                     </a>
-                    <a href="#services" class="nav-link text-sm md:text-base font-medium transition-colors duration-300 h-full flex items-center"
+                    <a href="#services"
+                       class="nav-link text-sm md:text-base font-medium transition-colors duration-300 h-full flex items-center"
                        :class="{ 'text-white hover:text-[#8cc63f]': !scrolled && !mobileMenu && window.location.hash === '', 'text-gray-600 hover:text-[#8cc63f]': scrolled || mobileMenu || window.location.hash !== '' }">
                         Services
                     </a>
-                    <a href="#about" class="nav-link text-sm md:text-base font-medium transition-colors duration-300 h-full flex items-center"
+                    <a href="#about"
+                       class="nav-link text-sm md:text-base font-medium transition-colors duration-300 h-full flex items-center"
                        :class="{ 'text-white hover:text-[#8cc63f]': !scrolled && !mobileMenu && window.location.hash === '', 'text-gray-600 hover:text-[#8cc63f]': scrolled || mobileMenu || window.location.hash !== '' }">
                         About
                     </a>
@@ -91,7 +95,8 @@
     {{-- Hero Section --}}
     <section id="home" class="relative min-h-[85vh] md:min-h-screen flex items-center bg-[#1a2b3c] overflow-hidden z-0">
         {{-- Hero Background with Overlay --}}
-        <div class="absolute inset-0 w-full h-full bg-[url('../images/business-5475659.jpg')] bg-cover bg-center bg-no-repeat opacity-70"></div>
+        <div
+            class="absolute inset-0 w-full h-full bg-[url('../images/business-5475659.jpg')] bg-cover bg-center bg-no-repeat opacity-70"></div>
         <div class="absolute inset-0 bg-gradient-to-r from-[#1a2b3c]/90 to-[#1a2b3c]/80"></div>
 
 
@@ -121,7 +126,7 @@
     </section>
 
     {{-- Enhanced Services Section --}}
-    <section id="services" class="py-12 sm:py-16 lg:py-24 bg-gray-50">
+    <section id="services" class="py-12 sm:py-16 lg:py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#1a2b3c]">Our Services</h2>
@@ -137,15 +142,17 @@
                      class="relative group overflow-hidden rounded-xl transition-all duration-500 ease-in-out cursor-pointer shadow-lg"
                      :class="{ 'transform -translate-y-2 shadow-xl': hover }">
                     <!-- Card Background with Gradient Only -->
-                    <div class="absolute inset-0 bg-gradient-to-br from-[#1a2b3c] to-[#2c3e50] group-hover:from-[#1a2b3c] group-hover:to-[#2c4255] transition-colors duration-500"></div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-[#1a2b3c] to-[#2c3e50] group-hover:from-[#1a2b3c] group-hover:to-[#2c4255] transition-colors duration-500"></div>
 
                     <!-- Card Content -->
                     <div class="relative p-8 h-full flex flex-col">
                         <!-- Icon -->
-                        <div class="w-14 h-14 rounded-full bg-[#8cc63f]/20 flex items-center justify-center mb-6
-                      group-hover:scale-110 transition-transform duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-[#8cc63f]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        <div class="w-14 h-14 rounded-full bg-[#8cc63f]/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-[#8cc63f]" fill="none"
+                                 viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.07c3.904-3.906 10.246-3.906 14.15 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/>
                             </svg>
                         </div>
 
@@ -153,11 +160,13 @@
                         <h3 class="text-xl sm:text-2xl font-semibold text-white group-hover:text-[#8cc63f] transition-colors duration-300">
                             Wireless Network Design
                         </h3>
-                        <div class="h-0.5 w-12 bg-[#8cc63f] mt-4 mb-6 group-hover:w-20 transition-all duration-300"></div>
+                        <div
+                            class="h-0.5 w-12 bg-[#8cc63f] mt-4 mb-6 group-hover:w-20 transition-all duration-300"></div>
 
                         <!-- Description -->
                         <p class="text-gray-300 group-hover:text-white">
-                            NIS offers full-service wireless (wifi) network implementation across the country. We can design, plan, and install your network from start to finish.
+                            NIS offers full-service wireless (wifi) network implementation across the country. We can
+                            design, plan, and install your network from start to finish.
                         </p>
                     </div>
                 </div>
@@ -169,15 +178,18 @@
                      class="relative group overflow-hidden rounded-xl transition-all duration-500 ease-in-out cursor-pointer shadow-lg"
                      :class="{ 'transform -translate-y-2 shadow-xl': hover }">
                     <!-- Card Background with Gradient Only -->
-                    <div class="absolute inset-0 bg-gradient-to-br from-[#1a2b3c] to-[#2c3e50] group-hover:from-[#1a2b3c] group-hover:to-[#2c4255] transition-colors duration-500"></div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-[#1a2b3c] to-[#2c3e50] group-hover:from-[#1a2b3c] group-hover:to-[#2c4255] transition-colors duration-500"></div>
 
                     <!-- Card Content -->
                     <div class="relative p-8 h-full flex flex-col">
                         <!-- Icon - Magnifying Glass for Site Survey -->
                         <div class="w-14 h-14 rounded-full bg-[#8cc63f]/20 flex items-center justify-center mb-6
                       group-hover:scale-110 transition-transform duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-[#8cc63f]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-[#8cc63f]" fill="none"
+                                 viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                             </svg>
                         </div>
 
@@ -185,11 +197,13 @@
                         <h3 class="text-xl sm:text-2xl font-semibold text-white group-hover:text-[#8cc63f] transition-colors duration-300">
                             WiFi Site Surveys
                         </h3>
-                        <div class="h-0.5 w-12 bg-[#8cc63f] mt-4 mb-6 group-hover:w-20 transition-all duration-300"></div>
+                        <div
+                            class="h-0.5 w-12 bg-[#8cc63f] mt-4 mb-6 group-hover:w-20 transition-all duration-300"></div>
 
                         <!-- Description -->
                         <p class="text-gray-300 group-hover:text-white">
-                            A professional wireless engineer will perform a comprehensive site survey of your facility to determine the best wireless LAN solution for your location.
+                            A professional wireless engineer will perform a comprehensive site survey of your facility
+                            to determine the best wireless LAN solution for your location.
                         </p>
                     </div>
                 </div>
@@ -201,15 +215,18 @@
                      class="relative group overflow-hidden rounded-xl transition-all duration-500 ease-in-out cursor-pointer shadow-lg"
                      :class="{ 'transform -translate-y-2 shadow-xl': hover }">
                     <!-- Card Background with Gradient Only -->
-                    <div class="absolute inset-0 bg-gradient-to-br from-[#1a2b3c] to-[#2c3e50] group-hover:from-[#1a2b3c] group-hover:to-[#2c4255] transition-colors duration-500"></div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-[#1a2b3c] to-[#2c3e50] group-hover:from-[#1a2b3c] group-hover:to-[#2c4255] transition-colors duration-500"></div>
 
                     <!-- Card Content -->
                     <div class="relative p-8 h-full flex flex-col">
                         <!-- Icon -->
                         <div class="w-14 h-14 rounded-full bg-[#8cc63f]/20 flex items-center justify-center mb-6
                       group-hover:scale-110 transition-transform duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-[#8cc63f]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-[#8cc63f]" fill="none"
+                                 viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
                             </svg>
                         </div>
 
@@ -217,11 +234,14 @@
                         <h3 class="text-xl sm:text-2xl font-semibold text-white group-hover:text-[#8cc63f] transition-colors duration-300">
                             Wireless Performance Audits
                         </h3>
-                        <div class="h-0.5 w-12 bg-[#8cc63f] mt-4 mb-6 group-hover:w-20 transition-all duration-300"></div>
+                        <div
+                            class="h-0.5 w-12 bg-[#8cc63f] mt-4 mb-6 group-hover:w-20 transition-all duration-300"></div>
 
                         <!-- Description -->
                         <p class="text-gray-300 group-hover:text-white">
-                            NIS provides network testing and certification services for new installations and existing networks. Our technicians can document and test your wiring using state-of-the-art equipment.
+                            NIS provides network testing and certification services for new installations and existing
+                            networks. Our technicians can document and test your wiring using state-of-the-art
+                            equipment.
                         </p>
                     </div>
                 </div>
@@ -229,8 +249,11 @@
         </div>
     </section>
 
+    {{-- Brands --}}
+    @include('partials.brands')
+
     {{-- Enhanced About Section --}}
-    <section id="about" class="py-12 sm:py-16 lg:py-24 bg-white">
+    <section id="about" class="py-12 sm:py-16 lg:py-24 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:grid lg:grid-cols-12 lg:gap-x-12 lg:items-center">
                 <!-- About Content Column -->
@@ -251,7 +274,8 @@
                         <p class="mt-6 text-lg leading-relaxed text-gray-700">
                             From detailed site surveys to complete network installations, we ensure every project
                             meets the highest standards of performance, reliability, and security. Our expertise spans
-                            various industries, including hospitality, education, manufacturing, and commercial real estate.
+                            various industries, including hospitality, education, manufacturing, and commercial real
+                            estate.
                         </p>
 
                         <div class="mt-10">
@@ -260,7 +284,8 @@
                            hover:bg-[#7bb32f] transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
                                 Schedule a consultation
                                 <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                                 </svg>
                             </a>
                         </div>
@@ -280,12 +305,15 @@
                                     <div class="flex items-center">
                                         <div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#8cc63f]/20 flex items-center justify-center
                                         group-hover:bg-[#8cc63f]/30 transition-colors duration-300">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#8cc63f]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#8cc63f]"
+                                                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                                             </svg>
                                         </div>
                                         <div class="ml-4">
-                                            <h4 class="text-lg font-medium text-white group-hover:text-[#8cc63f] transition-colors duration-300">Certified Engineers</h4>
+                                            <h4 class="text-lg font-medium text-white group-hover:text-[#8cc63f] transition-colors duration-300">
+                                                Certified Engineers</h4>
                                             <p class="mt-1 text-gray-300">Professional network technicians</p>
                                         </div>
                                     </div>
@@ -296,12 +324,15 @@
                                     <div class="flex items-center">
                                         <div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#8cc63f]/20 flex items-center justify-center
                                         group-hover:bg-[#8cc63f]/30 transition-colors duration-300">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#8cc63f]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#8cc63f]"
+                                                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                      d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
                                             </svg>
                                         </div>
                                         <div class="ml-4">
-                                            <h4 class="text-lg font-medium text-white group-hover:text-[#8cc63f] transition-colors duration-300">Comprehensive Surveys</h4>
+                                            <h4 class="text-lg font-medium text-white group-hover:text-[#8cc63f] transition-colors duration-300">
+                                                Comprehensive Surveys</h4>
                                             <p class="mt-1 text-gray-300">Detailed site planning</p>
                                         </div>
                                     </div>
@@ -312,12 +343,15 @@
                                     <div class="flex items-center">
                                         <div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#8cc63f]/20 flex items-center justify-center
                                         group-hover:bg-[#8cc63f]/30 transition-colors duration-300">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#8cc63f]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#8cc63f]"
+                                                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                      d="M13 10V3L4 14h7v7l9-11h-7z"/>
                                             </svg>
                                         </div>
                                         <div class="ml-4">
-                                            <h4 class="text-lg font-medium text-white group-hover:text-[#8cc63f] transition-colors duration-300">Enterprise Equipment</h4>
+                                            <h4 class="text-lg font-medium text-white group-hover:text-[#8cc63f] transition-colors duration-300">
+                                                Enterprise Equipment</h4>
                                             <p class="mt-1 text-gray-300">Premium grade installation</p>
                                         </div>
                                     </div>
@@ -328,12 +362,15 @@
                                     <div class="flex items-center">
                                         <div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#8cc63f]/20 flex items-center justify-center
                                         group-hover:bg-[#8cc63f]/30 transition-colors duration-300">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#8cc63f]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#8cc63f]"
+                                                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                      d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                             </svg>
                                         </div>
                                         <div class="ml-4">
-                                            <h4 class="text-lg font-medium text-white group-hover:text-[#8cc63f] transition-colors duration-300">Nationwide Coverage</h4>
+                                            <h4 class="text-lg font-medium text-white group-hover:text-[#8cc63f] transition-colors duration-300">
+                                                Nationwide Coverage</h4>
                                             <p class="mt-1 text-gray-300">Service across the country</p>
                                         </div>
                                     </div>
@@ -440,7 +477,8 @@
 
                 <nav class="flex items-center space-x-8 text-base">
                     <a href="#home" class="text-gray-300 hover:text-white transition-colors duration-300">Home</a>
-                    <a href="#services" class="text-gray-300 hover:text-white transition-colors duration-300">Services</a>
+                    <a href="#services"
+                       class="text-gray-300 hover:text-white transition-colors duration-300">Services</a>
                     <a href="#about" class="text-gray-300 hover:text-white transition-colors duration-300">About</a>
                     <a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-300">Contact</a>
                 </nav>
