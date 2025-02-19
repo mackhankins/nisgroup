@@ -14,48 +14,49 @@
             <div class="inline-flex animate-infinite-scroll">
                 {{-- First logo set --}}
                 <div class="flex">
-                    <div class="flex w-[160px] h-[80px] items-center justify-center mx-8">
-                        <div class="text-4xl font-bold text-white/90">A</div>
+                    <div class="flex w-[120px] h-[80px] items-center justify-center mx-8">
+                        <img class="svg-white" src="{{ Vite::asset('resources/images/brands/cisco.svg') }}" alt="Cisco" />
                     </div>
-                    <div class="flex w-[160px] h-[80px] items-center justify-center mx-8">
-                        <div class="text-4xl font-bold text-white/90">B</div>
+                    <div class="flex w-[180px] h-[100px] items-center justify-center mx-8">
+                        <img class="svg-white" src="{{ Vite::asset('resources/images/brands/ruckus.svg') }}" alt="CommScope" />
                     </div>
-                    <div class="flex w-[160px] h-[80px] items-center justify-center mx-8">
-                        <div class="text-4xl font-bold text-white/90">C</div>
+                    <div class="flex w-[180px] h-[100px] items-center justify-center mx-8">
+                        <img class="svg-white" src="{{ Vite::asset('resources/images/brands/aruba-networks.svg') }}" alt="Aruba Networks" />
                     </div>
-                    <div class="flex w-[160px] h-[80px] items-center justify-center mx-8">
-                        <div class="text-4xl font-bold text-white/90">D</div>
+                    <div class="flex w-[180px] h-[100px] items-center justify-center mx-8">
+                        <img class="svg-white" src="{{ Vite::asset('resources/images/brands/nomadix.svg') }}" alt="Nomadix" />
                     </div>
-                    <div class="flex w-[160px] h-[80px] items-center justify-center mx-8">
-                        <div class="text-4xl font-bold text-white/90">E</div>
+                    <div class="flex w-[180px] h-[100px] items-center justify-center mx-8">
+                        <img class="svg-white" src="{{ Vite::asset('resources/images/brands/watchguard.svg') }}" alt="WatchGuard" />
                     </div>
-                    <div class="flex w-[160px] h-[80px] items-center justify-center mx-8">
-                        <div class="text-4xl font-bold text-white/90">F</div>
+                    <div class="flex w-[180px] h-[100px] items-center justify-center mx-8">
+                        <img class="svg-white" src="{{ Vite::asset('resources/images/brands/fortinet.svg') }}" alt="Fortinet" />
                     </div>
                 </div>
 
                 {{-- Second logo set (identical spacing) --}}
                 <div class="flex">
-                    <div class="flex w-[160px] h-[80px] items-center justify-center mx-8">
-                        <div class="text-4xl font-bold text-white/90">A</div>
+                    <div class="flex w-[120px] h-[80px] items-center justify-center mx-8">
+                        <img class="svg-white" src="{{ Vite::asset('resources/images/brands/cisco.svg') }}" alt="Cisco" />
                     </div>
-                    <div class="flex w-[160px] h-[80px] items-center justify-center mx-8">
-                        <div class="text-4xl font-bold text-white/90">B</div>
+                    <div class="flex w-[180px] h-[100px] items-center justify-center mx-8">
+                        <img class="svg-white" src="{{ Vite::asset('resources/images/brands/ruckus.svg') }}" alt="CommScope" />
                     </div>
-                    <div class="flex w-[160px] h-[80px] items-center justify-center mx-8">
-                        <div class="text-4xl font-bold text-white/90">C</div>
+                    <div class="flex w-[180px] h-[100px] items-center justify-center mx-8">
+                        <img class="svg-white" src="{{ Vite::asset('resources/images/brands/aruba-networks.svg') }}" alt="Aruba Networks" />
                     </div>
-                    <div class="flex w-[160px] h-[80px] items-center justify-center mx-8">
-                        <div class="text-4xl font-bold text-white/90">D</div>
+                    <div class="flex w-[180px] h-[100px] items-center justify-center mx-8">
+                        <img class="svg-white" src="{{ Vite::asset('resources/images/brands/nomadix.svg') }}" alt="Nomadix" />
                     </div>
-                    <div class="flex w-[160px] h-[80px] items-center justify-center mx-8">
-                        <div class="text-4xl font-bold text-white/90">E</div>
+                    <div class="flex w-[180px] h-[100px] items-center justify-center mx-8">
+                        <img class="svg-white" src="{{ Vite::asset('resources/images/brands/watchguard.svg') }}" alt="WatchGuard" />
                     </div>
-                    <div class="flex w-[160px] h-[80px] items-center justify-center mx-8">
-                        <div class="text-4xl font-bold text-white/90">F</div>
+                    <div class="flex w-[180px] h-[100px] items-center justify-center mx-8">
+                        <img class="svg-white" src="{{ Vite::asset('resources/images/brands/fortinet.svg') }}" alt="Fortinet" />
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </section>

@@ -96,7 +96,7 @@
     <section id="home" class="relative min-h-[85vh] md:min-h-screen flex items-center bg-[#1a2b3c] overflow-hidden z-0">
         {{-- Hero Background with Overlay --}}
         <div
-            class="absolute inset-0 w-full h-full bg-[url('../images/business-5475659.jpg')] bg-cover bg-center bg-no-repeat opacity-70"></div>
+            class="absolute inset-0 w-full h-full bg-[url('../images/connected-cityscape.webp')] bg-cover bg-center bg-no-repeat opacity-70"></div>
         <div class="absolute inset-0 bg-gradient-to-r from-[#1a2b3c]/90 to-[#1a2b3c]/80"></div>
 
 
@@ -254,9 +254,6 @@
         </div>
     </section>
 
-    {{-- Brands --}}
-    @include('partials.brands')
-
     {{-- Enhanced About Section --}}
     <section id="about" class="py-12 sm:py-16 lg:py-24 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -400,104 +397,12 @@
         </div>
     </section>
 
-    {{-- Contact Section --}}
-    <section id="contact" class="py-12 sm:py-16 lg:py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-xl mx-auto">
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#1a2b3c] text-center">Contact Us</h2>
-                <p class="mt-4 text-base sm:text-lg text-gray-600 text-center">Get in touch with us</p>
+    {{-- Brands --}}
+    @include('partials.brands')
 
-                <form class="mt-12">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div class="relative">
-                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                            <input type="text" name="name" id="name" required
-                                   class="block w-full rounded-lg border-2 border-gray-200 px-4 py-3 outline-none
-                                      focus:border-[#8cc63f] focus:outline-none focus:ring-0
-                                      hover:border-[#8cc63f]/50
-                                      active:border-[#8cc63f]
-                                      transition-all duration-200 ease-in-out
-                                      placeholder-gray-400">
-                        </div>
+    @include('partials.contact_form')
 
-                        <div class="relative">
-                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
-                            <input type="tel" name="phone" id="phone"
-                                   class="block w-full rounded-lg border-2 border-gray-200 px-4 py-3 outline-none
-                                      focus:border-[#8cc63f] focus:outline-none focus:ring-0
-                                      hover:border-[#8cc63f]/50
-                                      active:border-[#8cc63f]
-                                      transition-all duration-200 ease-in-out
-                                      placeholder-gray-400">
-                        </div>
-                    </div>
-
-                    <div class="mt-6">
-                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                        <input type="email" name="email" id="email" required
-                               class="block w-full rounded-lg border-2 border-gray-200 px-4 py-3 outline-none
-                                  focus:border-[#8cc63f] focus:outline-none focus:ring-0
-                                  hover:border-[#8cc63f]/50
-                                  active:border-[#8cc63f]
-                                  transition-all duration-200 ease-in-out
-                                  placeholder-gray-400">
-                    </div>
-
-                    <div class="mt-6">
-                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                        <textarea name="message" id="message" rows="5" required
-                                  class="block w-full rounded-lg border-2 border-gray-200 px-4 py-3 outline-none
-                                     focus:border-[#8cc63f] focus:outline-none focus:ring-0
-                                     hover:border-[#8cc63f]/50
-                                     active:border-[#8cc63f]
-                                     transition-all duration-200 ease-in-out resize-none
-                                     placeholder-gray-400"></textarea>
-                    </div>
-
-                    <div class="mt-8">
-                        <x-turnstile />
-                    </div>
-
-                    <div class="mt-8">
-                        <button type="submit"
-                                class="w-full py-4 px-6 text-white bg-[#8cc63f] rounded-lg
-                                   hover:bg-[#7bb32f]
-                                   font-medium transition-all duration-200 ease-in-out
-                                   shadow-sm hover:shadow-md
-                                   transform hover:-translate-y-0.5
-                                   focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#8cc63f]">
-                            Send Message
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    {{-- Footer --}}
-    <footer class="bg-[#1a2b3c] text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
-                <div class="flex items-center justify-center w-full sm:justify-start -ml-12 sm:ml-0">
-                    <div class="h-20 flex items-center">
-                        @include('partials.logo', ['scale' => 2.5, 'transform_origin' => 'center center'])
-                    </div>
-                </div>
-
-                <nav class="flex items-center space-x-8 text-base">
-                    <a href="#home" class="text-gray-300 hover:text-white transition-colors duration-300">Home</a>
-                    <a href="#services"
-                       class="text-gray-300 hover:text-white transition-colors duration-300">Services</a>
-                    <a href="#about" class="text-gray-300 hover:text-white transition-colors duration-300">About</a>
-                    <a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-300">Contact</a>
-                </nav>
-            </div>
-
-            <div class="mt-8 pt-8 border-t border-gray-700">
-                <p class="text-center text-sm text-gray-400">&copy; {{ date('Y') }} NIS Group. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    @include('layouts.partials.footer')
 
     @push('scripts')
         <script>
