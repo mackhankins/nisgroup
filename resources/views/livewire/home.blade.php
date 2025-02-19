@@ -128,13 +128,18 @@
     {{-- Enhanced Services Section --}}
     <section id="services" class="py-12 sm:py-16 lg:py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
+            <div class="text-center mb-8 sm:mb-12">
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#1a2b3c]">Our Services</h2>
                 <p class="mt-4 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
                     Comprehensive solutions for your business needs
                 </p>
             </div>
-            <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+            {{-- Mobile Services Bubble Scroller (only visible on mobile) --}}
+            @include('partials.services-mobile-scroller')
+
+            {{-- Desktop Services Grid (hidden on mobile) --}}
+            <div class="hidden sm:grid mt-12 grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 <!-- Service Card 1 -->
                 <div x-data="{ hover: false }"
                      @mouseenter="hover = true"
@@ -185,7 +190,7 @@
                     <div class="relative p-8 h-full flex flex-col">
                         <!-- Icon - Magnifying Glass for Site Survey -->
                         <div class="w-14 h-14 rounded-full bg-[#8cc63f]/20 flex items-center justify-center mb-6
-                      group-hover:scale-110 transition-transform duration-300">
+                  group-hover:scale-110 transition-transform duration-300">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-[#8cc63f]" fill="none"
                                  viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -222,7 +227,7 @@
                     <div class="relative p-8 h-full flex flex-col">
                         <!-- Icon -->
                         <div class="w-14 h-14 rounded-full bg-[#8cc63f]/20 flex items-center justify-center mb-6
-                      group-hover:scale-110 transition-transform duration-300">
+                  group-hover:scale-110 transition-transform duration-300">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-[#8cc63f]" fill="none"
                                  viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -447,6 +452,10 @@
                                      active:border-[#8cc63f]
                                      transition-all duration-200 ease-in-out resize-none
                                      placeholder-gray-400"></textarea>
+                    </div>
+
+                    <div class="mt-8">
+                        <x-turnstile />
                     </div>
 
                     <div class="mt-8">
