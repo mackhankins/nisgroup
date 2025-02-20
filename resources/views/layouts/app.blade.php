@@ -17,8 +17,7 @@
 </head>
 <body class="font-sans antialiased">
 {{ $slot }}
-
-@livewireScripts
+@livewireScriptConfig
 @stack('scripts')
 </body>
 </html>

@@ -400,7 +400,7 @@
     {{-- Brands --}}
     @include('partials.brands')
 
-    @include('partials.contact_form')
+    <livewire:contact-form />
 
     @include('layouts.partials.footer')
 

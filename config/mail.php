@@ -113,4 +113,6 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
+    'contact_form_recipient' => env('MAIL_CONTACT_FORM_RECIPIENT', 'info@nisgroup.tech'),
+
 ];
