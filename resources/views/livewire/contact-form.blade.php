@@ -97,7 +97,7 @@
                   transition-all duration-200 ease-in-out
                   placeholder-gray-400
                   disabled:opacity-50 disabled:cursor-not-allowed"
-                                            placeholder="(___) ___-____">
+                                            placeholder="">
                                     </div>
 
                                     <!-- Help icon - hide on mobile -->
