@@ -18,7 +18,7 @@
         </div>
 
         <div class="mt-8 pt-8 border-t border-gray-700">
-            <p class="text-center text-sm text-gray-400">&copy; {{ date('Y') }} NIS Group. All rights reserved.</p>
+            <p class="text-center text-sm text-gray-400">&copy; {{ date('Y') }} Network Integrated Solutions Group. All rights reserved.</p>
         </div>
     </div>
 </footer>
