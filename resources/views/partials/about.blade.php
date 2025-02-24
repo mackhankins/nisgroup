@@ -42,7 +42,7 @@
             <div class="mt-12 lg:mt-0 lg:col-span-6">
                 <div class="bg-gradient-to-br from-[#1a2b3c] to-[#2c3e50] rounded-xl overflow-hidden shadow-xl">
                     <div class="p-8">
-                        <h3 class="text-2xl font-semibold text-white mb-6">Why Choose NIS Group</h3>
+                        <h3 class="text-2xl font-semibold text-white mb-6">Why Choose Network Integrated Solutions?</h3>
 
                         <!-- Feature Grid -->
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
