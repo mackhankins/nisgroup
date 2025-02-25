@@ -88,9 +88,18 @@ class ContactForm extends Component
                 'message' => $this->message
             ];
 
+            \Log::info('About to send email', [
+                'recipient' => config('mail.contact_form_recipient', 'contact@example.com'),
+                'emailData' => $emailData
+            ]);
+
             Mail::to(config('mail.contact_form_recipient', 'contact@example.com'))
                 ->send(new ContactFormSubmission($emailData));
-            \Log::info('Mail sent successfully to logs');
+
+            \Log::info('Mail sent successfully to logs', [
+                'mailer' => config('mail.default'),
+                'driver' => config('mail.mailers.' . config('mail.default') . '.transport')
+            ]);
 
             $this->showSuccessMessage = true;
             $this->turnstileResponse = '';
@@ -99,6 +108,10 @@ class ContactForm extends Component
             $this->dispatch('errorsOccurred');
             throw $e;
         } catch (\Exception $e) {
+            \Log::error('Failed to send mail: ' . $e->getMessage(), [
+                'exception' => get_class($e),
+                'trace' => $e->getTraceAsString()
+            ]);
             session()->flash('error', 'Sorry, there was an error sending your message. Please try again later.');
             $this->dispatch('errorsOccurred');
             report($e);
