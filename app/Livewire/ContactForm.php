@@ -38,7 +38,7 @@ class ContactForm extends Component
         'email.required' => 'Please enter a valid email address.',
         'message.required' => 'Please enter a message (10-2000 characters).',
         'turnstile.required' => 'Please complete the security verification.',
-        Turnstile::class => 'Security verification failed. Please try again.',
+//        Turnstile::class => 'Security verification failed. Please try again.',
     ];
 
     public function updated($propertyName)
