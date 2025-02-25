@@ -6,6 +6,7 @@ use Livewire\Component;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactFormSubmission;
 use Livewire\Attributes\Rule;
+use RyanChandler\LaravelCloudflareTurnstile\Rules\Turnstile;
 
 class ContactForm extends Component
 {
@@ -27,7 +28,7 @@ class ContactForm extends Component
 
     public $username = '';
 
-    public $turnstile = '';
+    public string $turnstileResponse = '';
 
     public $showSuccessMessage = false;
     public $loading = false;
@@ -40,7 +41,7 @@ class ContactForm extends Component
             'phone_number' => ['nullable'],
             'email' => ['required', 'email:rfc,dns'],
             'message' => ['required', 'min:10', 'max:2000'],
-            'turnstile' => ['required', \Illuminate\Validation\Rule::turnstile()],
+            'turnstileResponse' => ['required', \Illuminate\Validation\Rule::turnstile()],
         ];
     }
 
@@ -48,8 +49,8 @@ class ContactForm extends Component
         'name.required' => 'Please enter your name.',
         'email.required' => 'Please enter a valid email address.',
         'message.required' => 'Please enter a message (10-2000 characters).',
-        'turnstile.required' => 'Please complete the security verification.',
-        'turnstile' => 'Security verification failed. Please try again.',
+        'turnstileResponse.required' => 'Turnstile required',
+        Turnstile::class => 'Turnstile failed'
     ];
 
     public function updated($propertyName)
