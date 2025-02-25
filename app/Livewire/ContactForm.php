@@ -38,10 +38,10 @@ class ContactForm extends Component
         'email.required' => 'Please enter a valid email address.',
         'message.required' => 'Please enter a message (10-2000 characters).',
         'turnstile.required' => 'Please complete the security verification.',
-//        Turnstile::class => 'Security verification failed. Please try again.',
+        Turnstile::class => 'Security verification failed. Please try again.',
     ];
 
-    public function updated($propertyName)
+    public function updated($propertyName): void
     {
         if ($propertyName !== 'turnstileResponse') {
             try {
@@ -53,7 +53,7 @@ class ContactForm extends Component
         }
     }
 
-    public function combinePhoneNumber()
+    public function combinePhoneNumber(): void
     {
         if (empty($this->phone_number)) {
             $this->phone = '';
@@ -62,7 +62,7 @@ class ContactForm extends Component
         $this->phone = $this->country_code . ' ' . $this->phone_number;
     }
 
-    public function save()
+    public function save(): void
     {
         $this->loading = true;
 
