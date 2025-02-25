@@ -2,46 +2,34 @@
 
 namespace App\Livewire;
 
+use Illuminate\Validation\Rule;
 use Livewire\Component;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactFormSubmission;
-use Livewire\Attributes\Rule;
 use RyanChandler\LaravelCloudflareTurnstile\Rules\Turnstile;
 
 class ContactForm extends Component
 {
-    #[Rule('required|min:2|max:100', message: 'Please enter your name.')]
     public $name = '';
-
     public $country_code = '+1';
-
-    #[Rule('nullable', message: 'Please enter a valid phone number.')]
     public $phone_number = '';
-
     public $phone = '';
-
-    #[Rule('required|email:rfc,dns', message: 'Please enter a valid email address.')]
     public $email = '';
-
-    #[Rule('required|min:10|max:2000', message: 'Please enter a message (10-2000 characters).')]
     public $message = '';
-
     public $username = '';
-
     public string $turnstileResponse = '';
-
     public $showSuccessMessage = false;
     public $loading = false;
 
     // Define rules as a method
-    protected function rules()
+    protected function rules(): array
     {
         return [
             'name' => ['required', 'min:2', 'max:100'],
             'phone_number' => ['nullable'],
             'email' => ['required', 'email:rfc,dns'],
             'message' => ['required', 'min:10', 'max:2000'],
-            'turnstileResponse' => ['required', \Illuminate\Validation\Rule::turnstile()],
+            'turnstileResponse' => ['required', Rule::turnstile()],
         ];
     }
 
@@ -49,13 +37,13 @@ class ContactForm extends Component
         'name.required' => 'Please enter your name.',
         'email.required' => 'Please enter a valid email address.',
         'message.required' => 'Please enter a message (10-2000 characters).',
-        'turnstileResponse.required' => 'Turnstile required',
-        Turnstile::class => 'Turnstile failed'
+        'turnstile.required' => 'Please complete the security verification.',
+        Turnstile::class => 'Security verification failed. Please try again.',
     ];
 
     public function updated($propertyName)
     {
-        if ($propertyName !== 'turnstile') {
+        if ($propertyName !== 'turnstileResponse') {
             try {
                 $this->validateOnly($propertyName);
             } catch (\Illuminate\Validation\ValidationException $e) {
@@ -105,7 +93,7 @@ class ContactForm extends Component
             \Log::info('Mail sent successfully to logs');
 
             $this->showSuccessMessage = true;
-            $this->turnstile = '';
+            $this->turnstileResponse = '';
             $this->dispatch('scroll-to-contact');
         } catch (\Illuminate\Validation\ValidationException $e) {
             $this->dispatch('errorsOccurred');
@@ -123,8 +111,14 @@ class ContactForm extends Component
     {
         $this->reset([
             'name', 'country_code', 'phone_number', 'phone',
-            'email', 'message', 'turnstile', 'showSuccessMessage', 'username'
+            'email', 'message', 'turnstileResponse', 'showSuccessMessage', 'username'
         ]);
+
+        // Force turnstile to reset
+        $this->dispatch('formReset');
+
+        // Add a slight delay to ensure DOM is updated before rendering validation again
+        usleep(100000); // 100ms delay
     }
 
     public function render()

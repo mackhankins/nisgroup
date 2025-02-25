@@ -201,6 +201,7 @@
                                     data-theme="light"
                                     data-size="flexible"
                                     wire:model="turnstileResponse"
+                                    data-callback="onTurnstileSuccess"
                                 />
                             </div>
                             @error('turnstileResponse')
@@ -260,33 +261,41 @@
             </div>
         </div>
     </section>
-
-    {{-- JavaScript for scrolling to contact section --}}
-    <script>
-        document.addEventListener('scroll-to-contact', function () {
-            const contactSection = document.getElementById('contact');
-            if (contactSection) {
-                contactSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    </script>
-
-    @push('scripts')
-        <script>
-            document.addEventListener('livewire:initialized', function () {
-                Livewire.on('errorsOccurred', () => {
-                    const contactSection = document.getElementById('contact');
-                    if (contactSection) {
-                        contactSection.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-        </script>
-    @endpush
 </div>
+
+@push('scripts')
+    <script>
+        document.addEventListener('livewire:initialized', function () {
+            // Listen for the existing errors event
+            Livewire.on('errorsOccurred', () => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                    contactSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+
+            // Add this new event listener for form reset
+            Livewire.on('formReset', () => {
+                // Reset the Turnstile widget
+                if (typeof turnstile !== 'undefined') {
+                    turnstile.reset();
+                }
+            });
+        });
+
+        // Define the callback function for Turnstile
+        function onTurnstileSuccess(token) {
+            // Find Livewire component and set the token value
+            const component = window.Livewire.find(
+                document.querySelector('[wire\\:id]').getAttribute('wire:id')
+            );
+
+            if (component) {
+                component.set('turnstileResponse', token);
+            }
+        }
+    </script>
+@endpush
