@@ -79,13 +79,13 @@
                             ])
                         </div>
 
-                        <!-- Stats Row -->
-                        <div class="mt-10 pt-6 grid grid-cols-2 border-t border-gray-600">
-                            <div class="text-center py-4">
+                        <!-- Stats Row - Improved for Mobile -->
+                        <div class="mt-10 pt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-gray-600">
+                            <div class="text-center py-4 px-2">
                                 <p class="text-3xl font-bold text-[#8cc63f]">20+</p>
                                 <p class="text-sm text-gray-300 mt-1">Years Experience</p>
                             </div>
-                            <div class="text-center py-4 border-l border-gray-600">
+                            <div class="text-center py-4 px-2 sm:border-l border-gray-600">
                                 <p class="text-3xl font-bold text-[#8cc63f]">1000+</p>
                                 <p class="text-sm text-gray-300 mt-1">Projects Completed</p>
                             </div>
