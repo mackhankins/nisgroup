@@ -21,15 +21,15 @@
                         <img class="svg-white" src="{{ Vite::asset('resources/images/brands/ruckus.svg') }}" alt="CommScope" />
                     </div>
                     <div class="flex w-[180px] h-[100px] items-center justify-center mx-8">
-                        <img class="svg-white" src="{{ Vite::asset('resources/images/brands/aruba-networks.svg') }}" alt="Aruba Networks" />
-                    </div>
-                    <div class="flex w-[180px] h-[100px] items-center justify-center mx-8">
                         <img class="svg-white" src="{{ Vite::asset('resources/images/brands/nomadix.svg') }}" alt="Nomadix" />
                     </div>
-                    <div class="flex w-[180px] h-[100px] items-center justify-center mx-8">
+                    <div class="flex w-[140px] h-[90px] items-center justify-center my-6 mx-8">
+                        <img class="svg-white" src="{{ Vite::asset('resources/images/brands/aruba-networks.svg') }}" alt="Aruba Networks" />
+                    </div>
+                    <div class="flex w-[180px] h-[100px] items-center justify-center mx-8 my-2.5">
                         <img class="svg-white" src="{{ Vite::asset('resources/images/brands/watchguard.svg') }}" alt="WatchGuard" />
                     </div>
-                    <div class="flex w-[180px] h-[100px] items-center justify-center mx-8">
+                    <div class="flex w-[180px] h-[100px] items-center justify-center mx-8 my-2.5">
                         <img class="svg-white" src="{{ Vite::asset('resources/images/brands/fortinet.svg') }}" alt="Fortinet" />
                     </div>
                 </div>
@@ -43,15 +43,15 @@
                         <img class="svg-white" src="{{ Vite::asset('resources/images/brands/ruckus.svg') }}" alt="CommScope" />
                     </div>
                     <div class="flex w-[180px] h-[100px] items-center justify-center mx-8">
-                        <img class="svg-white" src="{{ Vite::asset('resources/images/brands/aruba-networks.svg') }}" alt="Aruba Networks" />
-                    </div>
-                    <div class="flex w-[180px] h-[100px] items-center justify-center mx-8">
                         <img class="svg-white" src="{{ Vite::asset('resources/images/brands/nomadix.svg') }}" alt="Nomadix" />
                     </div>
-                    <div class="flex w-[180px] h-[100px] items-center justify-center mx-8">
+                    <div class="flex w-[140px] h-[90px] items-center justify-center my-6 mx-8">
+                        <img class="svg-white" src="{{ Vite::asset('resources/images/brands/aruba-networks.svg') }}" alt="Aruba Networks" />
+                    </div>
+                    <div class="flex w-[180px] h-[100px] items-center justify-center mx-8 my-2.5">
                         <img class="svg-white" src="{{ Vite::asset('resources/images/brands/watchguard.svg') }}" alt="WatchGuard" />
                     </div>
-                    <div class="flex w-[180px] h-[100px] items-center justify-center mx-8">
+                    <div class="flex w-[180px] h-[100px] items-center justify-center mx-8 my-2.5">
                         <img class="svg-white" src="{{ Vite::asset('resources/images/brands/fortinet.svg') }}" alt="Fortinet" />
                     </div>
                 </div>
