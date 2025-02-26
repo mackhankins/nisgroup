@@ -8,11 +8,8 @@
         isSwiping: false,
         init() {
             this.$watch('currentSlide', value => {
-                // Force redraw to ensure smooth transition
-                this.$nextTick(() => {
-                    const slider = this.$refs.serviceSlider;
-                    slider.scrollLeft = value * slider.clientWidth;
-                });
+                // Update the active dot indicator only
+                // No forced scroll behavior - let natural scrolling happen
             });
         },
         nextSlide() {
@@ -23,6 +20,9 @@
         },
         goToSlide(index) {
             this.currentSlide = index;
+            // Use scrollIntoView with behavior: 'auto' for instant scrolling when dot is clicked
+            const slides = this.$refs.serviceSlider.querySelectorAll('.snap-center');
+            slides[index].scrollIntoView({ inline: 'start' });
         },
         handleTouchStart(e) {
             this.touchStartX = e.changedTouches[0].screenX;
@@ -63,7 +63,7 @@
         @touchend="handleTouchEnd"
         @scroll.throttle.100ms="handleScroll"
         class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide"
-        style="scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none; min-height: 360px;"
+        style="-webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none; min-height: 360px;"
     >
         <!-- Service Card 1 -->
         <div class="min-w-full w-full flex-shrink-0 px-4 snap-center flex">
