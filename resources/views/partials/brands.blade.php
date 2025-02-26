@@ -1,5 +1,5 @@
 {{-- Section with Border and Shadow --}}
-<section class="pt-8 pb-4.5 bg-[#1a2b3c] border-t border-b border-[#243b4d] shadow-[0_0_30px_rgba(0,0,0,0.3)]">
+<section class="pt-8 pb-4 bg-[#1a2b3c] border-t border-b border-[#243b4d] shadow-[0_0_30px_rgba(0,0,0,0.3)]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {{-- Marquee container with overflow hidden and gradient overlays --}}
