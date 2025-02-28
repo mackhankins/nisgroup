@@ -4,7 +4,7 @@
         <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
             <div class="flex items-center justify-center w-full sm:justify-start -ml-12 sm:ml-0">
                 <div class="h-20 flex items-center">
-                    @include('partials.logo', ['scale' => 2.5, 'transform_origin' => 'center center'])
+                    @include('partials.logo', ['scale' => 2.0, 'transform_origin' => 'center center'])
                 </div>
             </div>
 

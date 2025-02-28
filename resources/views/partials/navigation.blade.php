@@ -1,14 +1,14 @@
 {{-- resources/views/partials/navigation.blade.php --}}
 <nav class="fixed w-full z-[100] transition-all duration-300 border-0"
      :class="{ 'bg-transparent': !scrolled && !mobileMenu && window.location.hash === '', 'bg-white': scrolled || mobileMenu || window.location.hash !== '' }">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0">
         <div class="flex justify-between items-center h-16 md:h-20">
             <div class="flex items-center z-[200] relative h-full">
                 <a href="#home"
                    class="text-xl md:text-2xl font-bold transition-colors duration-300 flex items-center h-full -ml-12 sm:ml-0"
                    :class="{ 'text-white': !scrolled && !mobileMenu && window.location.hash === '', 'text-[#2d2d2d]': scrolled || mobileMenu || window.location.hash !== '' }">
                     <div class="flex items-center h-full w-auto">
-                        @include('partials.logo', ['scale' => 2.5, 'transform_origin' => 'left center'])
+                        @include('partials.logo', ['scale' => 3.0, 'transform_origin' => 'left center'])
                     </div>
                 </a>
             </div>
